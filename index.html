@@ -1,16 +1,19 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoja de Vida</title>
     <link rel="stylesheet" href="/styles/style.css">
+    <script src="/scripts/script.js"></script>
 </head>
 
 <body>
     <header>
         <h1>JORGE JUNIOR SOLANO ROMERO</h1>
     </header>
-    <section>
+    <main>
+        <section>
         <article>
             <h2>Información personal</h2>
             <p>Telefono Contacto: 3206327979</p>
@@ -88,11 +91,27 @@
             <hr>
             <p>Nula</p>
         </article>
+        <div id="menu" style="display: none ;">
+            <h2>Contactar</h2>
+            <p>Por favor llena el siguiente formulario:</p>
+            <hr>
+            <form action="/submit" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="example">
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="example@example.com">
+
+                <Button type="submit" onclick="mensaje()">Enviar</Button>
+            </form>
+        </div>
     </section>
+    </main>
+    
 
     <footer>
         <hr>
-        <p>CONTACTAR</p>
+        <p id="Contactar" onclick="menu()" title="Presioname">CONTACTAR</p>
     </footer>
 </body>
 
